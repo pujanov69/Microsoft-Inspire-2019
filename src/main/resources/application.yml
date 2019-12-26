@@ -1,0 +1,26 @@
+#########Default Configuration Properties ##########
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 200MB
+      max-request-size: 200MB
+      
+server:
+  port: 9090
+---  
+######## Dev Configuration Properties ########
+spring:
+  profiles: dev
+  datasource:
+     jdbc-url: jdbc:mysql://localhost:3306/unlimited?serverTimezone=UTC
+     username: root
+     password: root
+     useSSL: false
+     driver-class-name: com.mysql.jdbc.Driver
+debug: true
+logging:
+  loggin:
+    level:
+      root: ERROR
+  file: /pujanov69/unlimited/unlimited-task.log
