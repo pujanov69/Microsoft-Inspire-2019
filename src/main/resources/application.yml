@@ -24,3 +24,20 @@ logging:
     level:
       root: ERROR
   file: /pujanov69/unlimited/unlimited-task.log
+  
+---  
+######## Production Configuration Properties ########
+spring:
+  profiles: prod
+  datasource:
+     jdbc-url: jdbc:mysql://localhost:3306/unlimited?serverTimezone=UTC
+     username: root
+     password: 24Pr1y@msh@
+     useSSL: false
+     driver-class-name: com.mysql.jdbc.Driver
+debug: true
+logging:
+  loggin:
+    level:
+      root: ERROR
+  file: /pujanov69/unlimited/unlimited-task.log  
